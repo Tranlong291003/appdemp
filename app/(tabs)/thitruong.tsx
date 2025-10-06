@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function ThitruongScreen() {
   return (
       <View style={styles.container}>
-      <Text style={{fontSize: 50, fontWeight: 'bold'}}>Exploer</Text>
+      <Text style={{fontSize: 50, fontWeight: 'bold'}}>Thị trường</Text>
     </View>
   );
 }
