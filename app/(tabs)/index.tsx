@@ -1,23 +1,24 @@
 import OneBoxLayout from '@/app/oneboxlayout';
 import TwoBoxLayout from '@/app/twoboxlayout';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import Headercompement from '../headercompement';
+import { StyleSheet, Text, View } from 'react-native';
+import TabsScreen from '../tab';
+// import Headercompement from '../headercompement';
 
 export default function HomeScreen() {
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}>Fialda</Text>
-        </View>
-        <TwoBoxLayout />
-        <View style={styles.padding}></View>
-        <OneBoxLayout />
-        <View style={styles.padding}></View>
-        <Headercompement />
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Fialda</Text>
       </View>
-    </ScrollView>
+      <TwoBoxLayout />
+      <View style={styles.height}></View>
+      <OneBoxLayout />
+      <View style={styles.height}></View>
+      {/* <ContentScreen /> */}
+      {/* <Headercompement /> */}
+      <TabsScreen />
+    </View>
   );
 }
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F3F4F6',
-    padding: 15,
+    padding: 5,
   },
   header: {
     paddingTop: 25,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     padding: 10,
   },
-  padding: {
+  height: {
     height: 10,
   },
 });
