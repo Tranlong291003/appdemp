@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
   // mỗi box
   innerBox: {
-    flex: 1,                // chiếm đều 2 bên
+    flex: 1,
     backgroundColor: '#fff',
     borderRadius: 8,
     elevation: 3,

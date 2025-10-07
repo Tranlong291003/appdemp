@@ -1,6 +1,6 @@
 import React from 'react'
 import { ListRenderItem, StyleSheet, Text } from 'react-native'
-import { Tabs } from 'react-native-collapsible-tab-view'
+import { MaterialTabBar, Tabs } from 'react-native-collapsible-tab-view'
 import ContentScreen from './content'
 
 
@@ -61,9 +61,17 @@ export default function TabScreen() {
   )
 
   return (
-
-    <Tabs.Container>
-      <Tabs.Tab name="a">
+    <Tabs.Container
+      renderTabBar={(props: any) => (
+        <MaterialTabBar
+          {...props}
+          labelStyle={{ fontSize: 12, color: '#000', textTransform: 'capitalize' }}
+          indicatorStyle={{ backgroundColor: '#B888C4' }} // tùy chọn
+          tabStyle={{ paddingHorizontal: 1 }} // tùy chọn
+        />
+      )}
+    >
+      <Tabs.Tab name ="Tin tiêu điểm">
         <Tabs.FlatList
           data={data}
           renderItem={renderItem}
@@ -72,17 +80,17 @@ export default function TabScreen() {
           showsVerticalScrollIndicator={false}
         />
       </Tabs.Tab>
-      <Tabs.Tab name="B">
+      <Tabs.Tab name="Tin phổ biến">
         <Tabs.ScrollView>
           <Text>B</Text>
         </Tabs.ScrollView>
       </Tabs.Tab>
-      <Tabs.Tab name="c">
+      <Tabs.Tab name="Tin cộng đồng">
         <Tabs.ScrollView>
           <Text>C</Text>
         </Tabs.ScrollView>
       </Tabs.Tab>
-      <Tabs.Tab name="d">
+      <Tabs.Tab name="Thông Báo">
         <Tabs.ScrollView>
           <Text>D</Text>
         </Tabs.ScrollView>
